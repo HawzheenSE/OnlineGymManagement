@@ -6,17 +6,17 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body style="background-color:DarkSlategrey">
-{% ifequal error "res" %}
+{% if error == "res" %}
 <script>
     alert('logged in successfully');
     window.location=('{% url 'admin_home' %}');
 </script>
-{% endifequal %}
-{% ifequal error "not" %}
+{% endif %}
+{% if error == "not" %}
 <script>
     alert('Username & Password are not Matching');
 </script>
-{% endifequal %}
+{% endif %}
 
 <div class="container">
 <div class="container-fluid" style="background-color:green;border-radius:10px;width:60%;margin-top:10%;">
